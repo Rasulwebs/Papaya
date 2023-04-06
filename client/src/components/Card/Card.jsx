@@ -21,6 +21,7 @@ const Card = () => {
               </h2>
               <p>Designcode</p>
               <p className="card__body__text__views">14k views - 1 month ago</p>
+              <span></span>
             </div>
           </div>
         </div>
