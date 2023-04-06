@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./style.css";
 import ListItem from "../Sidebar-List-Item/ListItem";
-const ListFormat = () => {
+const ListFormat = ({check}) => {
   return (
     <>
       <ul className="List-wrapper">
@@ -13,7 +13,7 @@ const ListFormat = () => {
             isActive ? "bb isActiveColor" : " ";
           }}
           textCss="text1"
-          text="Home"
+          text={check ?  "Home": ""}
           street="/"
         />
         <ListItem
@@ -23,7 +23,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-explicit"
           textCss="text1"
-          text="Explores"
+          text={check ? "Explores" : ""}
           street="/tests2"
         />
         <ListItem
@@ -33,7 +33,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-fast-forward-circle"
           textCss="text1"
-          text="Shorts"
+          text={check && "Shorts"}
           street="/tests3"
         />
       </ul>
@@ -46,7 +46,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-collection-play"
           textCss="text1"
-          text="library"
+          text={check && "library"}
           street="/tests5"
         />
         <ListItem
@@ -56,7 +56,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-clock-history"
           textCss="text1"
-          text="history"
+          text={check && "history"}
           street="/tests26"
         />
         <ListItem
@@ -66,7 +66,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-play-btn"
           textCss="text1"
-          text="your videos"
+          text={check && "your videos"}
           street="/tests3786"
         />{" "}
         <ListItem
@@ -76,7 +76,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-stopwatch"
           textCss="text1"
-          text="watch later"
+          text={check && "watch later"}
           street="/tests378"
         />{" "}
         <ListItem
@@ -86,12 +86,12 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-hand-thumbs-up"
           textCss="text1"
-          text="like video"
+          text={check && "like video"}
           street="/tests379"
         />
       </ul>
       <span className="bloc"></span>
-      <h6 className="subscriptions">Subscriptions</h6>
+      <h6 className="subscriptions">{check && "Subscriptions" }</h6>
       <ul className="List-wrapper">
         <ListItem
           ListClass="aa"
@@ -100,7 +100,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-github"
           textCss="text1"
-          text="Github"
+          text={check && "Github"}
           street="/tests54"
         />
         <ListItem
@@ -110,7 +110,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-linkedin"
           textCss="text1"
-          text="Linkedin"
+          text={check && "Linkedin"}
           street="/tests269"
         />
         <ListItem
@@ -120,7 +120,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-twitter"
           textCss="text1"
-          text="twitter "
+          text={check && "twitter "}
           street="/tests37860"
         />
         <ListItem
@@ -130,7 +130,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-instagram"
           textCss="text1"
-          text="instagram"
+          text={check && "instagram"}
           street="/tests3785"
         />{" "}
         <ListItem
@@ -140,12 +140,12 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-telegram"
           textCss="text1"
-          text="Telegram"
+          text={check && "Telegram"}
           street="/tests3794"
         />
       </ul>
       <span className="bloc"></span>
-      <h6 className="subscriptions">Explore</h6>
+      <h6 className="subscriptions">{check && "Explore" }</h6>
       <ul className="List-wrapper">
         <ListItem
           ListClass="aa"
@@ -154,7 +154,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-github"
           textCss="text1"
-          text="trending"
+          text={check && "trending"}
           street="/tests545"
         />
         <ListItem
@@ -164,7 +164,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-music-note"
           textCss="text1"
-          text="Music"
+          text={check && "Music"}
           street="/testsqwd269"
         />
         <ListItem
@@ -174,7 +174,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-activity"
           textCss="text1"
-          text="Live "
+          text={check && "Live"}
           street="/tests3casc7860"
         />{" "}
         <ListItem
@@ -184,7 +184,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-controller"
           textCss="text1"
-          text="gaming"
+          text={check && "gaming"}
           street="/tesaxsts3785"
         />{" "}
         <ListItem
@@ -194,7 +194,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-newspaper"
           textCss="text1"
-          text="news"
+          text={check && "news"}
           street="/tests379df45w"
         />
         <ListItem
@@ -204,7 +204,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-award"
           textCss="text1"
-          text="sports"
+          text={check && "sports"}
           street="/tests37321948"
         />
         <ListItem
@@ -214,7 +214,7 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-lightbulb"
           textCss="text1"
-          text="learning"
+          text={check && "learning"}
           street="/tests373946"
         />
         <ListItem
@@ -224,10 +224,9 @@ const ListFormat = () => {
           }}
           LinkIcon="bi bi-bag"
           textCss="text1"
-          text="fashion & beauty"
+          text={check && "fashion & beauty"}
           street="/tests379425"
         />
-        
       </ul>
     </>
   );
